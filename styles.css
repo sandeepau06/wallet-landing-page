@@ -1,0 +1,351 @@
+/* --- 1. GLOBAL RESET --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* --- Color Variables --- */
+:root {
+    --bg-dark: #2B2B2B;
+    --text-white: #FFFFFF;
+    --btn-yellow: #F8D57E;
+    --btn-purple: #B79DFF;
+    --text-gray: #A0A0A0;
+}
+
+/* --- 2. FULL SCREEN BACKGROUND --- */
+html, body {
+    background-color: var(--bg-dark);
+    color: var(--text-white);
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden; /* Prevents horizontal scrollbars */
+}
+
+/* --- 3. THE DESKTOP DIMENSION LOCK --- */
+/* This forces the background to stretch, but keeps the content strictly at 1280px and centered! */
+header, main, footer {
+    width: 100%;
+    max-width: 1280px; 
+    margin: 0 auto;    /* Centers the 1280px container on wide monitors */
+}
+
+/* --- NAVBAR --- */
+.navbar {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    padding: 30px 5%;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: 700;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 30px; 
+}
+
+.nav-link {
+    color: var(--text-gray);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: var(--text-white); 
+}
+
+/* --- BUTTONS --- */
+.btn-purple {
+    background-color: var(--btn-purple);
+    color: var(--bg-dark);
+    padding: 10px 24px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.btn-yellow {
+    display: inline-block;
+    background-color: var(--btn-yellow);
+    color: var(--bg-dark);
+    padding: 14px 32px;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.btn-purple:hover, .btn-yellow:hover {
+    transform: scale(1.05); 
+}
+
+/* --- HERO SECTION --- */
+.hero {
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 80px;
+    padding: 0 5%;
+    gap: 50px;
+}
+
+.hero-text {
+    flex: 1; 
+}
+
+.hero-text h1 {
+    font-size: 56px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+}
+
+.hero-text p {
+    color: var(--text-gray);
+    font-size: 18px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    max-width: 450px;
+}
+
+.hero-image {
+    flex: 1; 
+    display: flex;
+    justify-content: flex-end;
+}
+
+.hero-image img {
+    max-width: 100%;
+    height: auto;
+    animation: fadeUp 1s ease-out forwards;
+}
+
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(30px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* --- LOGOS SECTION --- */
+.logos-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.logos-section img {
+    width: 100%;
+    height: auto;
+}
+
+/* --- PRODUCT IMAGE SECTION --- */
+.product-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    padding: 0 5%; 
+    width: 100%;
+}
+
+.product-section img {
+    width: 100%; 
+    height: auto;
+    border-radius: 24px; 
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* --- FEATURES SECTION --- */
+.features-section {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    margin-top: 80px;
+    margin-bottom: 120px;
+    padding: 0 5%;
+}
+
+.feature-card {
+    flex: 1; 
+    text-align: center; 
+}
+
+.feature-card img {
+    height: 48px;
+    margin-bottom: 24px;
+}
+
+.feature-card h3 {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    color: #FFFFFF;
+}
+
+.feature-card p {
+    color: #A0A0A0; 
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* --- TESTIMONIAL SECTION --- */
+.testimonial-section {
+    display: flex;
+    justify-content: center;
+    padding: 0 5%;
+    margin-bottom: 120px;
+}
+
+.testimonial-card {
+    background-color: var(--btn-purple); 
+    border-radius: 24px;
+    padding: 60px;
+    max-width: 900px;
+    width: 100%;
+}
+
+.quote {
+    color: #2B2B2B; 
+    font-size: 24px;
+    font-weight: 600;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+.author-profile {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.author-profile img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; 
+    object-fit: cover;
+}
+
+.author-details h4 {
+    color: #2B2B2B;
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+.stars {
+    color: #2B2B2B;
+    font-size: 14px;
+    letter-spacing: 2px;
+}
+
+/* --- CTA SECTION --- */
+.cta-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 5%;
+    margin-bottom: 120px;
+}
+
+.cta-text {
+    flex: 1; 
+}
+
+.cta-text h2 {
+    font-size: 56px;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 24px;
+}
+
+.cta-text p {
+    color: #A0A0A0;
+    font-size: 16px;
+    line-height: 1.6;
+    margin-bottom: 40px;
+}
+
+.cta-image {
+    flex: 1; 
+    display: flex;
+    justify-content: flex-end; 
+}
+
+.cta-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* --- FOOTER SECTION --- */
+.site-footer {
+    border-top: 1px solid #3A3A3A; 
+    padding: 60px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-logo {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 24px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 32px;
+    color: #A0A0A0; 
+    font-size: 14px;
+}
+
+.footer-links a {
+    color: #A0A0A0;
+    text-decoration: none;
+    transition: color 0.3s ease; 
+}
+
+.footer-links a:hover {
+    color: #FFFFFF; 
+}
+
+.footer-right p {
+    font-size: 14px;
+    margin-bottom: 16px;
+    color: #FFFFFF;
+}
+
+.newsletter-form {
+    display: flex;
+    gap: 16px;
+}
+
+.newsletter-form input {
+    background-color: transparent;
+    border: 1px solid #555555;
+    border-radius: 12px;
+    padding: 12px 24px;
+    color: #FFFFFF;
+    font-size: 14px;
+    width: 250px;
+    outline: none;
+}
+
+.newsletter-form input:focus {
+    border-color: var(--btn-purple); 
+}
+
+.newsletter-form button {
+    cursor: pointer;
+    font-size: 14px;
+    border: none;
+}
